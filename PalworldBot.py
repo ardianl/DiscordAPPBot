@@ -4,10 +4,21 @@ from discord import app_commands
 from subprocess import run as Subrun
 import pygetwindow as gw
 
-serverRunning = False
+# BOT RUNNING A SERVER ON SPARE PC; LAUNCHES USING BAT COMMAND LOCATED IN STARTUP FOLDER
+# CAN START PALWORLD DEDICATED SERVER THROUGH STEAM BY USING DISCORD SLASH COMMANDS
+# FOLLOW https://www.youtube.com/@James_S TUTORIAL FOR MORE INFORMATION
+#
+# COMMANDS:
+# /pal-start       START SERVER
+# /pal-stop        CLOSE SERVER
+# /pal-shutdown    SHUTDOWN PC
+# /pal-abort       ABORT SHUTDOWN
+# /pal-disconnect  DISCONNECT BOT
+#
 ServerID = 'ENTER SERVER ID HERE'    #DEV SERVER ID
 #ServerID = 'ENTER SERVER ID HERE' #PROD SERVER ID
 Token = 'ENTER TOKEN HERE'
+serverRunning = False
 intents = discord.Intents.default()
 intents.message_content =True
 GUILD_ID = discord.Object(id=ServerID)
